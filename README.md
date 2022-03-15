@@ -28,6 +28,13 @@ Things you may want to cover:
 Rails Useful Commands:
 
 * `rails generate scaffold NAME-OF-ROUTE COL-IN-DB: TYPE-OF-COL COL-IN-DB: TYPE-OF-COL`
-    * this command creates the relevent files and config to CRUD Route
+    * This command creates the relevent files and config to CRUD Route
+    * After run the `scaffold` commend, you need to make a migration between the modle and the DB table.
+        * For clarify things, will see in the `scaffold` output, under `active_record` -> `create db/migrate/   RANDOM-NUMBER_create_NAME-OF-ROUTE.rb`, there is the ruby code that we will use in the next commend.
+            * `rails db:migrate`
+            * Done!
 * `rails generate controller NAME-OF-CONTROLLER`
-    * this commend will generate a new controller files
+    * This commend will generate a new controller files
+* `rails routes --expanded` 
+    * This commend will give us the list of all the routes generated in you application
+
